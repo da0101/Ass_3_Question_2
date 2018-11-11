@@ -96,7 +96,7 @@ public class Main {
 				         + "|    Welcome to the program that testruns class House!   |\n"
 				         + "-------****-------****-------****-------****-----****-----\n");
 	}
-	
+	// Printing exist message.
 	private static void printExitMessage() {
 		System.out.println("\n ***** Thank you for testing Java class House *****");
 	}
