@@ -20,15 +20,17 @@ public class Main {
 		House H2  = new House(1950, 100000);
 		House H3  = new House(4, 120000);
 		House H4  = new House(2, "Detached", 220000);
+		House H5 = new House();
+		House H6 = new House(110000);
 		
 		// Calling printMessageWelcome()
 		printMessageWelcome();
 		//=======================================
 		// Testing the code for class House functionality. 
-		System.out.println("House H1: This House is type "+ H1.getTypeOfHouse() +". Its age is" +H1.getAge() + ". and costs " + H1.getCost());
-		System.out.println("House H1: This House is type "+ H2.getTypeOfHouse() +". Its age is" +H2.getAge() + ". and costs " + H2.getCost());
-		System.out.println("House H1: This House is type "+ H3.getTypeOfHouse() +". Its age is" +H3.getAge() + ". and costs " + H3.getCost());
-		System.out.println("House H1: This House is type "+ H4.getTypeOfHouse() +". Its age is" +H4.getAge() + ". and costs " + H4.getCost());
+		System.out.println("House H1: This House is type "+ H1.getTypeOfHouse() +". Its age is " +H1.getAge() + ". and costs " + H1.getCost());
+		System.out.println("House H1: This House is type "+ H2.getTypeOfHouse() +". Its age is " +H2.getAge() + ". and costs " + H2.getCost());
+		System.out.println("House H1: This House is type "+ H3.getTypeOfHouse() +". Its age is " +H3.getAge() + ". and costs " + H3.getCost());
+		System.out.println("House H1: This House is type "+ H4.getTypeOfHouse() +". Its age is " +H4.getAge() + ". and costs " + H4.getCost());
 		System.out.println();
 		System.out.println("Accessor Method: The housetype for house H4 is "+ H4.getTypeOfHouse() +". Its age is" +H4.getAge() + ". and costs " + H4.getCost());
 		System.out.println();
@@ -58,8 +60,34 @@ public class Main {
 		System.out.println("Houses H1 and H4 are equal is " + H1.equals(H4));
 		System.out.println();
 		System.out.println("House H4 is less than H3 is " + H4.isLessThan(H3));
-		System.out.println();
 		System.out.println("House H4 is greater than H3 is " + H4.isGreaterThan(H3));
+		System.out.println("\n======================================================");
+		System.out.println(" ****** Testing two more objects of type House *****");
+		System.out.println("======================================================\n");
+		System.out.println("House H5: This House is type "+ H5.getTypeOfHouse() +". Its age is " +H5.getAge() + ". and costs " + H5.getCost());
+		System.out.println("House H6: This House is type "+ H6.getTypeOfHouse() +". Its age is " +H6.getAge() + ". and costs " + H6.getCost());
+		//=======================================
+		System.out.println();
+		H5.setAgeAndCost(47, 130000);
+		H5.setTypeOfHouse("Semidetached");
+		H6.setAgeTypeAndCost(23, "Detached", 280000);
+		//=======================================
+		System.out.println();
+		System.out.println("The estimated price of house H5 is " + H5.estimatePrice(47, "Semidetached"));
+		System.out.println("The estimated price of house H6 is " + H6.estimatePrice(23, "Detached"));
+		//=======================================
+		System.out.println();
+		System.out.println("toString: " + H5);
+		System.out.println("toString: " + H6);
+		System.out.println("Houses H5 and H6 are equal is " + H5.equals(H6));
+		//=======================================
+		System.out.println();
+		System.out.println("House H5 is less than H6 is " + H5.isLessThan(H6));
+		System.out.println("House H5 is greater than H6 is " + H5.isGreaterThan(H6));	
+		System.out.println();
+		System.out.println("======================================================");
+		printExitMessage();
+		
 	}
 	
 	// Printing welcome message.
@@ -67,5 +95,9 @@ public class Main {
 		System.out.println("-------****-------****-------****-------****-----****-----\n"
 				         + "|    Welcome to the program that testruns class House!   |\n"
 				         + "-------****-------****-------****-------****-----****-----\n");
+	}
+	
+	private static void printExitMessage() {
+		System.out.println("\n ***** Thank you for testing Java class House *****");
 	}
 }
